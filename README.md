@@ -1,6 +1,6 @@
 # specification_fonctionnelle_technique_Groupe_5
-# Présentation des Design patterns Façade et Strategie
-## Qu'est ce qu'un Design pattern ?
+## Présentation des Design patterns Façade et Strategie
+### Qu'est ce qu'un Design pattern ?
 
 Le design pattern aussi appellé `modèle de conception` constitue un élémet primaire dans la programmation orienté objet.
 
