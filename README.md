@@ -6,7 +6,7 @@ Le design pattern aussi appellé `modèle de conception` constitue un élémet p
 
 Les Design patterns ont été crée du fait que les développeurs ont fait face à des problèmes de conception récurents et similaires.
 
-### Voic les Design patterns que nous verrons et à quoi ils servent :
+### Voici les Designs patterns que nous verrons et à quoi ils servent :
 
 | Nom  | Utilisation |
 |---|---| 
