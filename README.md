@@ -1,3 +1,2 @@
-# sp-cification_fonctionnelle_technique_Groupe_5
+# specification_fonctionnelle_technique_Groupe_5
 
-test 
