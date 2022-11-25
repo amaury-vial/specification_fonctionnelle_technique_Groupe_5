@@ -124,12 +124,120 @@ L'exécution de ce code nous donne :
 
 ```html
 
-[out]
+[OUT]
 
 Paiement Paypal effectué avec succès
 Paiement en CB effectué avec succès
 Paiement en liquide accepté
 Aucun moyen de paiement n'a été défini
+
+Process finished with exit code 0
+```
+### Le modèle de conception Façade :
+
+Voici un prototype d'utilisation :
+Prenons l'exemple d'un système de création de forme.
+
+```mermaid
+classDiagram
+    Formes <-- Rectangle:implements
+    Formes <-- Triangle:implements
+    Formes <-- Carre:implements  
+    Formes <-- FormesGenerateur : uses
+    Formes : +draw()
+    <<interface>> Formes
+    FormesGenerateur <-- main
+    class main{
+    }
+    class FormesGenerateur{
+    +drawRectangle()
+    +drawTriangle()
+    +drawCarre()
+    }
+    class Rectangle{
+    }
+    class Triangle{
+    }
+    class Carre{
+    }
+```
+
+Création de la classe interface
+
+```java
+public interface Formes {
+    void draw();
+}
+```
+
+Création des trois méthodes implémentant la classe `Formes` :
+
+```java
+public class Carre implements Formes{
+    @Override
+    public void draw() {
+        System.out.println("Carre");
+    }
+}
+
+public class Rectangle implements Formes {
+    @Override
+    public void draw() {
+        System.out.println("Rectangle");
+    }
+}
+
+public class Triangle implements Formes{
+    @Override
+    public void draw() {
+        System.out.println("Triangle");
+    }
+}
+
+```
+Création de la Classe `FormesGenerateur` permettant à l'utilisateur d'y accéder afin de crée des formes :
+
+```java
+public class FormesGenerateur {
+    private Formes carre;
+    private Formes rectangle;
+    private Formes triangle;
+
+    public FormesGenerateur() {
+        carre = new Carre();
+        rectangle = new Rectangle();
+        triangle = new Triangle();
+    }
+    public void drawCarre(){
+        carre.draw();
+    }
+    public void drawRectangle(){
+        rectangle.draw();
+    }
+    public void drawTriangle(){
+        triangle.draw();
+    }
+}
+```
+
+Enfin le Main :
+
+```java
+public class main {
+    public static void main(String[] args) {
+        FormesGenerateur formesGenerateur = new FormesGenerateur();
+        formesGenerateur.drawCarre();
+        formesGenerateur.drawRectangle();
+        formesGenerateur.drawTriangle();
+    }
+}
+```
+
+``` html
+[OUT]
+Carre
+Rectangle
+Triangle
 
 Process finished with exit code 0
 ```
