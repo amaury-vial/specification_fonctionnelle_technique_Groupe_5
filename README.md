@@ -11,7 +11,7 @@ Les Design patterns ont été crée du fait que les développeurs ont fait face 
 | Nom  | Utilisation |
 |---|---| 
 | Façade | --|
-| Strategie | Il permet de permuter des méthodes dans une application. Le tout est encapsuler en tant qu'objet et sont interchangeables. Cela fonctione comme un `switch` qui laisse la liberté au algorithmes de permuter en fonction des utilisateurs qui les emplois.|
+| Strategie | Il permet de permuter des méthodes dans une application. Le tout est encapsulé en tant qu'objet et sont interchangeables. Cela fonctione comme un `switch` qui laisse la liberté au algorithmes de permuter en fonction des utilisateurs qui les emplois.|
 
 
 #### Le modèle de conception Stratégie :
