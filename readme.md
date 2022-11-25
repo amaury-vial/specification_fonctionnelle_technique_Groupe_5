@@ -10,7 +10,7 @@ Les Design patterns ont été crée du fait que les développeurs ont fait face 
 
 | Nom  | Utilisation |
 |---|---| 
-| Façade | --|
+| Façade | Il permet de crée une classe agissant comme une interface simple afin de gérer un sous-système complexe. Cela rend l'utilisation des outils du sous-système plus facile mais limites leur utilisation. On utilise souvent Façade afin d'utiliser seulement une partie des outils du sous-systeme.|
 | Strategie | Il permet de permuter des méthodes dans une application. Le tout est encapsulé en tant qu'objet et sont interchangeables. Cela fonctione comme un `switch` qui laisse la liberté au algorithmes de permuter en fonction des utilisateurs qui les emplois.|
 
 
